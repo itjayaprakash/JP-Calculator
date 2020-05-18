@@ -7,10 +7,10 @@
     <title>JP : Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+	var xValue,yValue;
     getinput = (event,value) => {
         console.log(event,"Input Value",value)
         var outputBox = document.getElementById('output_disp');
-        var xValue,yValue;
         if(typeof value == "number") {
             let prevValue = outputBox.value +""+ value
             outputBox.value = prevValue;
@@ -18,19 +18,16 @@
         else if (typeof value == "string") {
             if(value == "backspace") {
                 outputBox.value = '';
-                return true;
             }
             else if(value == "addition") {
                 xValue = outputBox.value;
                 outputBox.value = '';
-                return true;
             }
             else if(value == "equal") {
                 yValue = outputBox.value;
                 outputBox.value = '';
-                let sumofvalue  = xValue+yValue;
+                let sumofvalue  = parseInt(xValue)+parseInt(yValue);
                 outputBox.value = sumofvalue;
-                return true;
             }
 
         }
@@ -64,11 +61,11 @@
             <div class="calc_row">
                 <button onclick="getinput(event,0)">0</button>
                 <button onclick="getinput(event,'addition')"> + </button>
-                <button onclick="getinput(event,'substraction')"> - </button>
+                <button onclick="getinput(event,'substraction')" disabled> - </button>
             </div>
             <div class="calc_row">
-                <button onclick="getinput(event,'muliplication')"> * </button>
-                <button onclick="getinput(event,'division')"> /</button>
+                <button onclick="getinput(event,'muliplication')" disabled> * </button>
+                <button onclick="getinput(event,'division')" disabled> /</button>
                 <button onclick="getinput(event,'backspace')"> <-</button>
             </div>
             <div class="calc_row">
