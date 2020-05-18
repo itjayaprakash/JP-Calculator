@@ -1,0 +1,37 @@
+html,body {
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+}
+.calc_widget {
+    width: 200px;
+    height: 220px;
+    background: #4CAF50;
+    border-radius: 5px;
+    padding: 6px;
+    border: 1px solid #4CAF50;
+    box-shadow: 4px 4px 4px #d1d1d1;
+}
+.calc_head input {
+    width: 178px;
+    margin: 0px 5px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 1px;
+    height: 25px;
+    padding: 0px 10px;
+}
+.calc_row {
+    display: flex;
+}
+
+.calc_row button {
+    width: 100%;
+    margin: 5px 5px;
+}
